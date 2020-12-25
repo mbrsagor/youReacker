@@ -6,10 +6,9 @@ class Socail extends React.Component {
             <div>
                 <p>Find me on socail</p>
                 <ul>
-                    <li><a href="https//linkedin.com/mbrsagor">Linkedin</a></li>
-                    <li><a href="https//github.com/mbrsagor">GitHub</a></li>
-                    <li><a href="https//facebook.com/mbrsagor">Facebook</a></li>
-                    <li><a href="https//twitter.com/mbrsagor">Twitter</a></li>
+                    {this.props.links.map(link => (
+                       <li><a href={link.link}>{link.name}</a></li> 
+                    ))}
                 </ul>
             </div>
         )
