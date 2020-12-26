@@ -2,12 +2,18 @@ import React from 'react';
 import Profile from './profile';
 import Product from '../components/product'
 import MyState from '../components/state';
+import MyEvent from '../components/my_events';
 
 class App extends React.Component {
     render() {
         return (
             <div className="container">
                 <div className="row mb-3">
+                    <div className="col-md-6 offset-3">
+                        <MyEvent />
+                    </div>
+                </div>
+                {/* <div className="row mb-3">
                     <div className="col-md-6 offset-3">
                         <MyState />
                     </div>
@@ -37,7 +43,7 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }
