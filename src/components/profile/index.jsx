@@ -1,25 +1,33 @@
 import React from 'react';
+
+import {featchData} from '../../profile_data';
 import Info from './info';
 import Skills from './skill';
 import Socail from './social';
 
 class Profile extends React.Component {
-    name = 'Bozlur Rosid Sagor';
-    bio = 'full-stack software Engineer';
-    skills = ['Python', 'JavaScript', 'Dart', 'Swift'];
-    links = [
-        {link: 'http://www.facebook.com/mbrsagor', name: 'Facebook'},
-        {link: 'http://www.linkedin.com/mbrsagor', name: 'Linkedin'},
-        {link: 'http://www.github.com/mbrsagor', name: 'GitHub'},
-        {link: 'http://www.twitter.com/mbrsagor', name: 'Twitter'},
-    ];
+    
+    constructor(props) {
+        super(props);
+        // console.log(this.props);
+        const profile = featchData(props.id);
+        this.state = {
+            id: profile.id  ||'',
+            name: profile.name ||'',
+            bio: profile.bio ||'',
+            skills: profile.skills ||[],
+            links: profile.links ||[]
+        }
+    }
+
     render() {
         // console.log(this.props);
+        const {name, bio, skills, links} = this.state;
         return (
             <div>
-                <Info name={this.name} bio={this.bio}/>
-                <Skills skills={this.skills} />
-                <Socail links={this.links}/>
+                <Info name={name} bio={bio}/>
+                <Skills skills={skills} />
+                <Socail links={links}/>
             </div>
         )
     }

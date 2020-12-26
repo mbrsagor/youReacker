@@ -7,12 +7,12 @@ class App extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 offset-3">
-                        <h1>Welcome to my Homepage</h1>
+                        <h2>Welcome to my Homepage</h2>
                         <hr/>
                         
-                        <Profile />
-                        <Profile />
-                        <Profile />
+                        <Profile id={1} />
+                        <Profile id={2} />
+                        <Profile id={3} />
                     </div>
                 </div>
             </div>
