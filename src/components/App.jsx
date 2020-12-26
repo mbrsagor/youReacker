@@ -13,7 +13,7 @@ class App extends React.Component {
                         <MyEvent />
                     </div>
                 </div>
-                {/* <div className="row mb-3">
+                <div className="row mb-3">
                     <div className="col-md-6 offset-3">
                         <MyState />
                     </div>
@@ -43,7 +43,7 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         )
     }
