@@ -1,11 +1,17 @@
 import React from 'react';
 import Profile from './profile';
 import Product from '../components/product'
+import MyState from '../components/state';
 
 class App extends React.Component {
     render() {
         return (
             <div className="container">
+                <div className="row mb-3">
+                    <div className="col-md-6 offset-3">
+                        <MyState />
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-md-6">
                         <div className="card">
