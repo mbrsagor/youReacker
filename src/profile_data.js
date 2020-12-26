@@ -36,7 +36,7 @@ const data = [
 ];
 
 export const featchData = id => {
-    return data.find(d => d.id === id)
+  return data.find(d => d.id === id)
 };
 
 export default data;
