@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ViewTask from './task_view';
+import CreateTask from './create_task';
 
 class MyList extends Component {
 
@@ -21,9 +22,24 @@ class MyList extends Component {
         this.setState({ tasks });
     }
 
+    getTask = task => {
+        console.log(task);
+        let taskObject = {
+            IsComple: false
+        }
+        taskObject.task = task;
+        taskObject.id = new Date().getTime()
+
+        let tasks = [...this.state.tasks]
+        tasks.push(taskObject);
+
+        this.setState({tasks})
+    }
+
     render() {
         return (
             <div>
+                <CreateTask getTask={this.getTask} />
                 <ViewTask tasks={this.state.tasks} handleCompleter={this.handleCompleter}/>
             </div>
         );
