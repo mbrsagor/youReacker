@@ -32,6 +32,7 @@ class MyFormik extends Component {
                     onSubmit={(values, formikBag) => {
                         console.log(values);
                         console.log(formikBag);
+                        formikBag.resetForm();
                     }}
                     validationSchema={myValidtionsScheme}
                     // validateOnBlur={true}
