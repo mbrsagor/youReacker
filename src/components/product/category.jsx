@@ -8,7 +8,7 @@ class Category extends React.Component {
                 <h4>Category:</h4>
                 <ul>
                     {this.props.category.map((cat) =>
-                        <li>{cat}</li>
+                        <li key={cat}>{cat}</li>
                     )}
                 </ul>
             </>

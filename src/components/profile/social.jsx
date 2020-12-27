@@ -8,7 +8,7 @@ class Socail extends React.Component {
                 <p>Find me on socail</p>
                 <ul>
                     {this.props.links.map(link => (
-                       <li><a href={link.link}>{link.name}</a></li> 
+                       <li key={link}><a href={link.link}>{link.name}</a></li> 
                     ))}
                 </ul>
             </div>

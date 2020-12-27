@@ -8,7 +8,7 @@ class Skills extends React.Component {
                 <p>Skills:</p>
                 <ul>
                     {this.props.skills.map(skill => (
-                       <li>{skill}</li> 
+                       <li key={skill}>{skill}</li> 
                     ))}
                 </ul>
             </div>
