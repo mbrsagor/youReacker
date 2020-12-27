@@ -2,6 +2,7 @@ import React from 'react';
 import {Formik, Form, Field} from 'formik';
 
 const MyForm = (props) => {
+    console.log(props.errors)
     return (
        <Form>
             <div className="form-group">
