@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ViewTask from './task_view';
 import CreateTask from './create_task';
+import ControlTask from './control_task'
 
 class MyList extends Component {
 
@@ -11,7 +12,8 @@ class MyList extends Component {
                 task: 'Do some coding',
                 IsComple: false
             }
-        ]
+        ],
+        searchTram: ''
     }
 
     handleCompleter = (id, checked) => {
@@ -36,11 +38,27 @@ class MyList extends Component {
         this.setState({tasks})
     }
 
+    search = () => {
+        if (!this.state.searchTram) {
+            return this.state.tasks
+        }
+
+        return this.state.tasks.filter(_task => 
+            _task.task.toLocaleLowerCase().includes(this.state.searchTram.toLocaleLowerCase())
+        )
+    }
+
+    handleSearchTram = event => {
+        this.setState({searchTram: event.target.value})
+    }
+
     render() {
+        let tasks = this.search();
         return (
             <div>
                 <CreateTask getTask={this.getTask} />
-                <ViewTask tasks={this.state.tasks} handleCompleter={this.handleCompleter}/>
+                <ControlTask handleSearchTram={this.handleSearchTram} />
+                <ViewTask tasks={tasks} handleCompleter={this.handleCompleter}/>
             </div>
         );
     }
