@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Formik, Form, Field} from 'formik';
+import { Formik, Form, Field } from 'formik';
+import MyForm from './form'
 
 class MyFormik extends Component {
     render() {
@@ -11,8 +12,10 @@ class MyFormik extends Component {
                     onSubmit={(values, formikBag) => {
                         console.log(values);
                         console.log(formikBag);
-                    }}>
-                    
+                    }}
+                    component={MyForm}
+                    />
+{/*                     
                     {(props) => {
                         // console.log(props);
                         return <Form>
@@ -39,7 +42,7 @@ class MyFormik extends Component {
                             <button type="submit" className="btn btn-success btn-sm">save</button>
                         </Form>
                     }}
-                </Formik>
+                </Formik> */}
             </div>
         );
     }
