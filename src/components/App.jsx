@@ -9,12 +9,19 @@ import MyList from '../components/list';
 import MyTable from './my_table';
 import LifecycleDemo from '../components/life_cycle';
 import HOC from '../components/hoc';
+import ContextAPI from './context_API';
 
 
 class App extends React.Component {
     render() {
         return (
             <div className="container">
+                <div className="row mb-3">
+                    <div className="col-md-6 offset-3">
+                        <ContextAPI />
+                    </div>
+                </div>
+                <br /><br />
                  <div className="row mb-3">
                     <div className="col-md-6 offset-3">
                         <HOC />
