@@ -1,43 +1,70 @@
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 
 const Profile = () => {
+
+    const { user } = useContext(AuthContext)
+
     return (
-        <AuthContext.Consumer>
-            {value => (
-                <div>
-                    <p>Name: {value.user.name}</p>
-                    <p>Email: {value.user.email}</p>
-                </div>
-            )}
-        </AuthContext.Consumer>
-    )
+        <div>
+            <p>Name: {user.name}</p>
+            <p>Email: {user.email}</p>
+        </div>
+    );
+
+    // return (
+    //     <AuthContext.Consumer>
+    //         {value => (
+    //             <div>
+    //                 <p>Name: {value.user.name}</p>
+    //                 <p>Email: {value.user.email}</p>
+    //             </div>
+    //         )}
+    //     </AuthContext.Consumer>
+    // )
 }
 
 const NavBar = () => {
 
-    return (
-        <AuthContext.Consumer>
-            {({isAuthenticated, toggleAuth}) =>(
-                <>
-                    {isAuthenticated ? <button onClick={toggleAuth} className="btn btn-info btm-sm">Logout</button> : <button onClick={toggleAuth} className="btn btn-info btm-sm">Login</button>}
-                </>
-            )}
-        </AuthContext.Consumer>
-    )
+    const { isAuthenticated, toggleAuth } = useContext(AuthContext)
+    
+    if(isAuthenticated){
+        return <button onClick={toggleAuth} className="btn btn-info btm-sm">Logout</button>
+    }
+    return <button onClick={toggleAuth} className="btn btn-info btm-sm">Login</button>
+
+    // return (
+    //     <AuthContext.Consumer>
+    //         {({isAuthenticated, toggleAuth}) =>(
+    //             <>
+    //                 {isAuthenticated ? <button onClick={toggleAuth} className="btn btn-info btm-sm">Logout</button> : <button onClick={toggleAuth} className="btn btn-info btm-sm">Login</button>}
+    //             </>
+    //         )}
+    //     </AuthContext.Consumer>
+    // )
 }
 
 const User = () => {
+    const { isAuthenticated } = useContext(AuthContext)
+
     return (
-        <AuthContext.Consumer>
-            {value => (
-                <div>
-                    <NavBar />
-                    <hr />
-                    {value.isAuthenticated ? (<Profile />) : (<p>Please login</p>)}
-                </div>
-            )}
-        </AuthContext.Consumer>
-    )
+        <div>
+            <NavBar />
+            <hr />
+            {isAuthenticated ? (<Profile />) : (<p>Please login</p>)}
+        </div>
+    );
+    
+    // return (
+    //     <AuthContext.Consumer>
+    //         {value => (
+    //             <div>
+    //                 <NavBar />
+    //                 <hr />
+    //                 {value.isAuthenticated ? (<Profile />) : (<p>Please login</p>)}
+    //             </div>
+    //         )}
+    //     </AuthContext.Consumer>
+    // )
 }
 
 const AuthContext = React.createContext();
