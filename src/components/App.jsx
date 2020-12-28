@@ -6,7 +6,8 @@ import MyEvent from '../components/my_events';
 import MyForms from '../components/my_forms';
 import MyFormik from '../components/formik'
 import MyList from '../components/list';
-import MyTable from './my_table'
+import MyTable from './my_table';
+import LifecycleDemo from '../components/life_cycle';
 
 
 class App extends React.Component {
@@ -14,6 +15,12 @@ class App extends React.Component {
         return (
             <div className="container">
                  <div className="row mb-3">
+                    <div className="col-md-6 offset-3">
+                        <LifecycleDemo />
+                    </div>
+                </div>
+                <br /><br />
+                <div className="row mb-3">
                     <div className="col-md-6 offset-3">
                         <MyTable />
                     </div>
