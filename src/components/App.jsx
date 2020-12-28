@@ -8,6 +8,7 @@ import MyFormik from '../components/formik'
 import MyList from '../components/list';
 import MyTable from './my_table';
 import LifecycleDemo from '../components/life_cycle';
+import HOC from '../components/hoc';
 
 
 class App extends React.Component {
@@ -15,6 +16,12 @@ class App extends React.Component {
         return (
             <div className="container">
                  <div className="row mb-3">
+                    <div className="col-md-6 offset-3">
+                        <HOC />
+                    </div>
+                </div>
+                <br /><br />
+                <div className="row mb-3">
                     <div className="col-md-6 offset-3">
                         <LifecycleDemo />
                     </div>
