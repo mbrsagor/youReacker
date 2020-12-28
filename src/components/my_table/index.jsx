@@ -36,13 +36,19 @@ class MyTable extends Component {
     }
 
     render() {
-        let data= this.getItemPerPage();
+        let data = this.getItemPerPage();
+        const totalPage = Math.ceil(this.state.users.length / itemPerPage);
+        const nextDisabled = (this.state.currentpage) === totalPage;
+        const prevDisabled = this.state.currentpage < 1;
+
         return (
             <div>
                 <h3>I'm Table</h3>
                 <TableView
                     nextpage={this.nextpage}
                     prevpage={this.prevpage}
+                    nextDisabled={nextDisabled}
+                    prevDisabled={prevDisabled}
                     data={data}
                 />
             </div>
