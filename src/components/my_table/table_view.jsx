@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TableView = ({data=[]}) =>{
+const TableView = ({data=[], nextpage, prevpage}) =>{
     return (
         <div>
             <table className="table table-striped table-bordered">
@@ -14,7 +14,7 @@ const TableView = ({data=[]}) =>{
                 </thead>
                 <tbody>
                     {data.map(item => (
-                        <tr>
+                        <tr key={item.id}>
                             <td>{item.id}</td>
                             <td>{item.first_name}</td>
                             <td>{item.last_name}</td>
@@ -26,6 +26,10 @@ const TableView = ({data=[]}) =>{
                     ))}
                 </tbody>
             </table>
+            <div>
+                <button onClick={prevpage} className="btn btn-primary btm-sm mr-2"><i className="fa fa-arrow-right"></i></button>
+                <button onClick={nextpage} className="btn btn-primary btm-sm"><i className="fa fa-arrow-left"></i></button>
+            </div>
         </div>
     )
 }
