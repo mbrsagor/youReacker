@@ -12,7 +12,8 @@ import HOC from '../components/hoc';
 import ContextAPI from './context_API';
 import MyReducer from '../components/my_reducer';
 import MyReducer2 from '../components/my_reducer2';
-import HooksAndContext from '../components/hook_context_api'
+import HooksAndContextAPI from '../components/hooks_context_api';
+import {CounterProvider} from '../context/counter_context';
 
 
 class App extends React.Component {
@@ -21,7 +22,9 @@ class App extends React.Component {
             <div className="container">
                 <div className="row mb-3">
                     <div className="col-md-6 offset-3">
-                        <HooksAndContext />
+                        <CounterProvider>
+                            <HooksAndContextAPI />
+                        </CounterProvider>
                     </div>
                 </div>
                 <br /><br />
