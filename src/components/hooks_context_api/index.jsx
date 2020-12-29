@@ -9,12 +9,10 @@ const Controller = ({actions}) => {
             <button onClick={actions.increment} className="btn btn-success btn-sm mr-2">
                 <i className="fa fa-plus"></i>
             </button>
-            <button onClick={actions.decrement}
-                className="btn btn-success btn-sm mr-2">
+            <button onClick={actions.decrement} className="btn btn-success btn-sm mr-2">
                 <i className="fa fa-minus"></i>
            </button>
-            <button onClick={actions.reset}
-                className="btn btn-danger btn-sm mr-2">
+            <button onClick={actions.reset} className="btn btn-danger btn-sm">
                 <i className="fa fa-close"></i>
            </button>
         </div>

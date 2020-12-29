@@ -13,13 +13,23 @@ import ContextAPI from './context_API';
 import MyReducer from '../components/my_reducer';
 import MyReducer2 from '../components/my_reducer2';
 import HooksAndContextAPI from '../components/hooks_context_api';
-import {CounterProvider} from '../context/counter_context';
+import { CounterProvider } from '../context/counter_context';
+// import PostApp from '../components/post_app';
+// import {PostProvider} from '../context/post_context';
 
 
 class App extends React.Component {
     render() {
         return (
             <div className="container">
+                {/* <div className="row mb-3">
+                    <div className="col-md-6 offset-3">
+                        <PostProvider>
+                             <PostApp />
+                        </PostProvider>
+                    </div>
+                </div>
+                <br /><br /> */}
                 <div className="row mb-3">
                     <div className="col-md-6 offset-3">
                         <CounterProvider>
