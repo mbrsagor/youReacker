@@ -12,12 +12,19 @@ import HOC from '../components/hoc';
 import ContextAPI from './context_API';
 import MyReducer from '../components/my_reducer';
 import MyReducer2 from '../components/my_reducer2';
+import HooksAndContext from '../components/hook_context_api'
 
 
 class App extends React.Component {
     render() {
         return (
             <div className="container">
+                <div className="row mb-3">
+                    <div className="col-md-6 offset-3">
+                        <HooksAndContext />
+                    </div>
+                </div>
+                <br /><br />
                 <div className="row mb-3">
                     <div className="col-md-6 offset-3">
                         <MyReducer2 />
