@@ -1,24 +1,14 @@
 import React, { createContext, useReducer } from 'react';
+import reducer, {createActions} from '../reducers/counter_reducer';
 
 const CounterContext = createContext()
 
-const reducer = (state, action) => {
-    switch (action.type) {
-        case 'INCREMENT':
-            return state + 1
-        case 'DECREMENT':
-            return state - 1
-        case 'RESET':
-            return 0
-        default: return state
-    }
-};
-
 const CounterProvider = props => {
-    const [count, dispatch] = useReducer(reducer, 0)
+    const [count, dispatch] = useReducer(reducer, 0);
+    const actions = createActions(dispatch)
 
     return (
-        <CounterContext.Provider value={{count, dispatch}}>
+        <CounterContext.Provider value={{count, actions}}>
             {props.children}
         </CounterContext.Provider>
     )
