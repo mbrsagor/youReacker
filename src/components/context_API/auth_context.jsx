@@ -25,4 +25,4 @@ class AuthProvider extends Component {
 
 }
 
-export {AuthProvider, Consumer as AuthConsumer, AuthContext}
+export { AuthProvider, Consumer as AuthConsumer, AuthContext }
