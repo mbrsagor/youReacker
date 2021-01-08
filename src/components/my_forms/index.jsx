@@ -24,7 +24,7 @@ class MyForms extends Component {
     validate = () => {
        const errors = {}
        
-       const {values:{name, email, password}} = this.state.errors
+    //    const {values:{name, email, password}} = this.state.errors
        
         if(!errors.name){
             errors.name = "Please provide a name"
