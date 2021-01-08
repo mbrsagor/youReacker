@@ -50,7 +50,7 @@ const AuthContext = createContext();
  * Main conponent
  */
 
-class ContextAPI extends Component {
+class ContextAPIDemo extends Component {
 
     state = {
         user: {
@@ -80,4 +80,4 @@ class ContextAPI extends Component {
     }
 }
 
-export default ContextAPI
+export default ContextAPIDemo

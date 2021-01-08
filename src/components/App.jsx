@@ -14,6 +14,7 @@ import MyReducer from '../components/my_reducer';
 import MyReducer2 from '../components/my_reducer2';
 import HooksAndContextAPI from '../components/hooks_context_api';
 import { CounterProvider } from '../context/counter_context';
+import ContextAPIDemo from '../components/context_API/inline_context_demo'
 // import PostApp from '../components/post_app';
 // import {PostProvider} from '../context/post_context';
 
@@ -41,6 +42,12 @@ class App extends React.Component {
                 <div className="row mb-3">
                     <div className="col-md-6 offset-3">
                         <MyReducer2 />
+                    </div>
+                </div>
+                <br /><br />
+                <div className="row mb-3">
+                    <div className="col-md-6 offset-3">
+                        <ContextAPIDemo />
                     </div>
                 </div>
                 <br /><br />
