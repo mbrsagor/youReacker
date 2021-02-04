@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ChildComponent from './childComponent'
+// import ChildComponent from './childComponent'
 
 
 const url = 'https://jsonplaceholder.typicode.com/posts'

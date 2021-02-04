@@ -20,7 +20,7 @@ class AuthProvider extends Component {
 
 
     render() {
-        return <Provider value={{... this.state, toggleAuth: this.toggleAuthention}}>{this.props.children}</Provider>
+        return <Provider value={{...this.state, toggleAuth: this.toggleAuthention}}>{this.props.children}</Provider>
     }
 
 }

@@ -14,9 +14,9 @@ const withName = Component => {
     }
 }
 
-const DisplayName = props => {
-    <h2>Hello {props.name}</h2>
-}
+// const DisplayName = props => {
+//     <h2>Hello {props.name}</h2>
+// }
 // const DisplayWithName = withName(DisplayName);
 
 class HigherOrderComponent extends Component {

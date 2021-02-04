@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import Forms from './forms'
 
 class MyForms extends Component {
@@ -44,7 +44,7 @@ class MyForms extends Component {
     changeHandler = event => {
         this.setState({
             values: {
-                ... this.state.values,
+                ...this.state.values,
                 [event.target.name] : event.target.value
             }
         });
@@ -58,7 +58,7 @@ class MyForms extends Component {
     render() {
         return (
             <div>
-                <h3>My forms</h3>
+                <h3>My forms data component</h3>
                 <Forms
                     values={this.state.values}
                     errors={this.state.errors}
