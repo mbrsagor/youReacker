@@ -1,13 +1,11 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
+# YouReacker
+> The repo is pure React.JS project where has basic to advance topic in react.js step by step.
+#### Install the repo in your local dev server.
+```base
+cd youReacker
+npm install
+npm start
+```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
@@ -98,5 +96,4 @@ class ContextAPI extends Component {
 }
 
 export default ContextAPI
-
 ```
