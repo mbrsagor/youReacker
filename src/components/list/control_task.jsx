@@ -5,7 +5,7 @@ const ControlTask = props => {
         <div>
             <input type="text"
                 className="form-control"
-                placeholder="Seach sonething"
+                placeholder="Seach task"
                 value={props.searchTram}
                 onChange={props.handleSearchTram}
             />

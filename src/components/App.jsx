@@ -1,21 +1,22 @@
 import React from 'react';
-import Profile from './profile';
-import Product from '../components/product'
-import MyState from '../components/state';
+import ContextAPIDemo from '../components/context_API/inline_context_demo';
+import MyFormik from '../components/formik';
+import HOC from '../components/hoc';
+import Hooks from '../components/hooks';
+import HooksContext from '../components/HooksContext';
+import HooksAndContextAPI from '../components/hooks_context_api';
+import LifecycleDemo from '../components/life_cycle';
+import MyList from '../components/list';
 import MyEvent from '../components/my_events';
 import MyForms from '../components/my_forms';
-import MyFormik from '../components/formik'
-import MyList from '../components/list';
-import MyTable from './my_table';
-import LifecycleDemo from '../components/life_cycle';
-import HOC from '../components/hoc';
-import ContextAPI from './context_API';
 import MyReducer from '../components/my_reducer';
 import MyReducer2 from '../components/my_reducer2';
-import HooksAndContextAPI from '../components/hooks_context_api';
+import Product from '../components/product';
+import MyState from '../components/state';
 import { CounterProvider } from '../context/counter_context';
-import ContextAPIDemo from '../components/context_API/inline_context_demo';
-import Hooks from '../components/hooks';
+import ContextAPI from './context_API';
+import MyTable from './my_table';
+import Profile from './profile';
 // import PostApp from '../components/post_app';
 // import {PostProvider} from '../context/post_context';
 
@@ -32,6 +33,11 @@ class App extends React.Component {
                     </div>
                 </div>
                 <br /><br /> */}
+                <div className="row">
+                    <div className="col-md-6 offset-3">
+                        <HooksContext />
+                    </div>
+                </div>
                 <div className="row mb-3">
                     <div className="col-md-6 offset-3">
                         <CounterProvider>
