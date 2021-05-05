@@ -1,7 +1,10 @@
 # YouReacker
 > The repo is pure React.JS project where has basic to advance topic in react.js step by step.
-#### Install the repo in your local dev server.
+
+#### Install and run the repo in your local dev server.
+
 ```base
+git clone https://github.com/mbrsagor/youReacker.git
 cd youReacker
 npm install
 npm start
