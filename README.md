@@ -3,11 +3,15 @@
 
 #### Install and run the repo in your local dev server.
 
+
+The following steps will walk you thru installation on a Mac. I think linux should be similar. It's also possible to develop on a Windows machine, but I have not documented the steps. If you've developed the `React` apps on Windows, you should have little problem getting up and running.
+
+
 ```base
 git clone https://github.com/mbrsagor/youReacker.git
 cd youReacker
-npm install
-npm start
+yarn install
+yarn start
 ```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
